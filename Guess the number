@@ -1,0 +1,22 @@
+import random
+
+num = random.randint(1, 20)
+count = 0
+
+while True:
+    guess = int(input("Guess the Number [1 to 20]: "))
+
+    if guess < 1 or guess > 20:
+        print("Invalid Number")
+    else:
+        count += 1
+
+        if guess == num:
+            print("You have entered", guess)
+            print("The Random Number is", num)
+            print("So, at last you got it in", count, "attempts.")
+            break
+        elif guess > num:
+            print("Oops! your number is too big, try again....>")
+        else:
+            print("Oh ho! you have guessed too small, try again....>")
